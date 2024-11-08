@@ -1,0 +1,40 @@
+<div class="wrapper" style="display: flex;">
+    <div class="backgroud-section"></div>
+    <div class="section login-section">
+        <form method="POST" action="/user/login" class="login-form">
+            <h3 class="mt-5">ĐĂNG NHẬP</h3>
+            <div style="position: relative;">
+                <input type="email" class="input-login email-login" id="email" name="email" placeholder="Email">
+                <span class="border-animation"></span>
+            </div>
+            <div style="position: relative;">
+                <input type="password" class="input-login password-login" id="password" name="password"
+                    placeholder="Mật khẩu">
+                <span class="border-animation"></span>
+            </div>
+            <div class="login-help">
+                <span>
+                    <input type="checkbox" class="checkbox">
+                    <p>Lưu đăng nhập</p>
+                </span>
+                <a href="">Quên mật khẩu?</a>
+            </div>
+            <button class="btn btn-primary">ĐĂNG NHẬP</button>
+            <div class="line-form">
+                <div class="line-item"></div>
+                Hoặc
+                <div class="line-item"></div>
+            </div>
+            <div class="login-form-social">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+            </div>
+            <div class="conversion-form">
+                <p>Bạn chưa có tài khoản?</p>
+                <a href="/user/register">Đăng kí</a>
+            </div>
+
+        </form>
+    </div>
+</div>

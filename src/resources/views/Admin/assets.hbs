@@ -1,0 +1,147 @@
+<div class="page-wrapper">
+
+	<!-- Page Content -->
+	<div class="content container-fluid">
+
+		<!-- Page Header -->
+		<div class="page-header">
+			<div class="row">
+				<div class="col">
+					<h3 class="page-title">Quản lý bài viết</h3>
+				</div>
+				<div class="col-auto float-right ml-auto" style="display: flex; align-items: center;">
+					<a href="/admin/post-content" class="btn add-btn"><i class="fa fa-plus"></i> Thêm bài viết</a>
+				</div>
+			</div>
+		</div>
+		<!-- /Page Header -->
+
+		<!-- Search Filter -->
+		<form method="post" action="/admin/assets/search" class="row filter-row">
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group form-focus">
+					<input type="text" class="form-control floating" id="name" name="name">
+					<label class="focus-label">Tên bài viết</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group form-focus">
+					<input type="text" class="form-control floating" id="author" name="author">
+					<label class="focus-label">Tên tác giả</label>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<div class="form-group form-focus select-focus" >
+					<select class="select floating"id="topic" name="topic">
+						<option>Chọn chủ đề</option>
+						<option>Tin tức</option>
+						<option>Công nghệ</option>
+						<option>Khoa học</option>
+						<option>Mạng xã hội</option>
+						<option>Tin tức xe hơi</option>
+						<option>Y tế</option>
+						<option >Góc nhìn</option>
+						<option >Tips và tricks</option>
+
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3">
+				<button class="btn btn-success btn-block" type="submit">Search</button>
+			</div>
+		</form>
+		<!-- Search Filter -->
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-nowrap custom-table mb-0">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Tên bài viết</th>
+									<th>Chủ đề</th>
+									<th>Tên tác giả</th>
+									<th>Ngày xuất bản</th>
+									<th class="text-center">Trạng thái</th>
+									<th class="text-center">Thêm</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								{{#each posts}}
+								<tr>
+									<td>{{sum @index 1}}</td>
+									<td><a href="{{this._id}}/edit">{{this.name}} </a></td>
+									<td>{{this.topic}}</td>
+									<td>{{this.author}}</td>
+									<td>{{this.updatedAt}}</td>
+									<td class="text-center">
+										<div class="action-label">
+											<a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown"
+												aria-expanded="false">
+												<i class="fa fa-dot-circle-o text-success"></i> Hoàn thành
+											</a>
+										</div>
+									</td>
+									<td class="text-center">
+										<div class="dropdown dropdown-action">
+											<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown"
+												aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#" data-toggle="modal"
+													data-target="#delete_employee" data-id="{{this._id}}"><i class="fa fa-trash-o m-r-5"></i>
+													Delete</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /Page Content -->
+
+	<div class="modal fade" id="delete_employee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Xóa bài viết?</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Xác nhận xóa bài viết?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+					<button type="button" class="btn btn-danger" id="btn-delete-post">Xác nhận</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form name="delete-post-form" method="post"></form>
+
+	<script>
+		var postID 
+		var deleteform = document.forms['delete-post-form']
+		var btnDeletePost = document.getElementById('btn-delete-post')
+
+		document.addEventListener('DOMContentLoaded', function() {
+			$('#delete_employee').on('show.bs.modal', function (event) {
+				var button = $(event.relatedTarget)
+				postID = button.data('id')
+			})
+
+
+			btnDeletePost.onclick = function() {
+				deleteform.action = '/admin/assets/' + postID + '?_method=DELETE'
+				deleteform.submit()
+			}
+		})
+	</script>
