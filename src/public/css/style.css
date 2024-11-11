@@ -14,12 +14,6 @@
 /* BASIC 
 **************************************/
 
-body {
-    font-size: 15px;
-    line-height: 26px;
-    background-color: #ffffff;
-}
-
 h1,
 h2,
 h3,
@@ -201,9 +195,11 @@ a {
     padding: 0;
     box-shadow: none;
     border-radius: 0;
-    min-width: 240px;
-    margin-top: 15px !important;
+    min-width: 135px;
+    margin-top: -3px !important;
     border-color: #edeff2;
+    left: -215px;
+
 }
 
 .header .dropdown ul li {
@@ -217,6 +213,20 @@ a {
     top: 75%;
     border-radius: 2px !important;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%) !important ;
+}
+
+ul.dropdown-menu.account-menu > li {
+    text-align: center;
+}
+
+ul.dropdown-menu.options {
+    left: -41px;
+    text-align: center;
+    top: 55px;
+}
+
+ul.dropdown-menu.options > li {
+    padding: 8px;
 }
 
 .account-menu li {
@@ -1313,7 +1323,7 @@ hr.invis3 {
 
 
 .blog-list .blog-meta.big-meta h4 {
-    margin-left: -20%;
+    margin-left: -4%;
     margin-top: 1rem;
     background-color: #ffffff;
     padding: 1rem 1.5rem 1rem;
@@ -1872,11 +1882,11 @@ hr.invis3 {
 }
 
 .login-form .login-form-social a:nth-child(2) {
-    color: #00B6F1;
+    color: #d631bf;
 }
 
 .login-form .login-form-social a:last-child {
-    color: #1da1f2;
+    color: #ff0710;
 }
 
 .login-form .conversion-form {

@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 
 async function connect() {
     try {
-        await mongoose.connect('mongodb+srv://koaibiet21:21102003@cluster0.lwlh9zr.mongodb.net/');
+        await mongoose.connect('mongodb://localhost:27017/TongHopTinTuc');
 
-        console.log('Conect successfully')
+        console.log('Conect successfully!')
     }
     catch (error) {
-        console.log('Conect error')
+        console.log('Conect error!')
     }
 }
 

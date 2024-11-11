@@ -99,7 +99,7 @@ h5 {
 
 .backgroud-section {
     display: flex;
-    background-image: url("/images/backgroud-01.jpg");
+    background-image: url("/images/news.png");
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -178,8 +178,8 @@ h5 {
     background-color: #3b5998;
 }
 
-.twitter-button {
-    background-color: #1da1f2;
+.instagram-button {
+    background-color: #f20088;
 }
 
 .google-button {
@@ -202,7 +202,7 @@ h5 {
 }
 
 .footer {
-    background-color: #000000;
+    background-color: #082643;
     background-image: none;
 }
 
@@ -290,7 +290,7 @@ a:focus {
 .navbar-inverse {
     color: #ffffff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0 !important;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #001e41 0px, #2f4e55 100%) repeat scroll 0 0 !important;
     flex-wrap: nowrap;
 }
 

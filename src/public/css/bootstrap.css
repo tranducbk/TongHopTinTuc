@@ -7614,6 +7614,8 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 
 .mt-5 {
   margin-top: 3rem !important;
+  text-align: center;
+  font-weight: bold;
 }
 
 .mr-5 {
