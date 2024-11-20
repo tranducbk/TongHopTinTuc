@@ -9,7 +9,8 @@ const Posts = new Schema({
     image: { type: String, maxlength: 255 },
     link: { type: String, default: ''},
     spotling: { type: Boolean},
-    category: {type: String}
+    category: {type: String},
+    publicationDate: { type: String }
 }, {
     timestamps: true
 });

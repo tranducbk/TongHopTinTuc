@@ -1,29 +1,14 @@
 <section class="section first-section">
             <div class="container-fluid">
                 <div class="masonry-blog clearfix">
+                    {{#each posts}}
                     <div class="first-slot">
                         <div class="masonry-box post-media">
-                             <img src="/images/{{post.image}}" alt="" class="img-fluid">
+                             <img src="{{this.image}}" alt="" class="img-fluid">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
-                                        <span class="bg-orange"><a href="/user/tech-category-01" title="">{{post.topic}}</a></span>
-                                        <h4><a href="{{this.link}}" title="">{{post.name}}</a></h4>
-                                        <small><a href="{{this.link}}" class="date" datetime="{{post.createdAt}}" title="">{{post.createdAt}}</a></small>
-                                        <small><a href="/user/tech-author" title="">{{post.author}}</a></small>
-                                    </div><!-- end meta -->
-                                </div><!-- end shadow-desc -->
-                            </div><!-- end shadow -->
-                        </div><!-- end post-media -->
-                    </div><!-- end first-side -->
-                    {{#each posts}}
-                    <div class="second-slot">
-                        <div class="masonry-box post-media">
-                             <img src="/images/{{this.image}}" alt="" class="img-fluid">
-                             <div class="shadoweffect">
-                                <div class="shadow-desc">
-                                    <div class="blog-meta">
-                                        <span class="bg-orange"><a href="#" title="">{{this.topic}}</a></span>
+                                        <span class="bg-orange"><a href="#" title="">{{this.topic}}</a>HOT</span>
                                         <h4><a href="{{this.link}}" title="">{{this.name}}</a></h4>
                                         <small><a href="{{this.link}}" class="date" datetime="{{this.createdAt}}" title="">{{this.createdAt}}</a></small>
                                         <small><a href="{{this.link}}" title="">{{this.author}}</a></small>
@@ -52,7 +37,7 @@
                                     <div class="col-md-4">
                                         <div class="post-media">
                                             <a href="{{this.link}}" title="">
-                                                <img src="/images/{{this.image}}" alt="" class="img-fluid">
+                                                <img src="{{this.image}}" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
                                         </div><!-- end media -->
@@ -61,8 +46,8 @@
                                     <div class="blog-meta big-meta col-md-8">
                                         <h4><a href="{{this.link}}" title="">{{this.name}}</a></h4>
                                         <p>{{this.description}}</p>
-                                        <small class="firstsmall"><a class="bg-orange" href="/user/tech-category-01" title="">{{this.topic}}</a></small>
-                                        <small><a href="#" title="">{{this.createdAt}}</a></small>
+                                        <small class="firstsmall"><a class="bg-orange" href="#" title="">{{this.topic}}Hot</a></small>
+                                        <small><a href="#" title="">{{this.publicationDate}}</a></small>
                                         <small><a href="#" title="">{{this.author}}</a></small>
                                         <small><a href="{{this.link}}" title=""><i class="fa fa-eye"></i> 1114</a></small>
                                     </div><!-- end meta -->
@@ -101,7 +86,7 @@
                                     <div class="blog-box">
                                         <div class="post-media">
                                             <a href="{{this.link}}r" title="">
-                                                <img src="/images/{{this.image}}" alt="" class="img-fluid">
+                                                <img src="{{this.image}}" alt="" class="img-fluid">
                                                 <div class="hovereffect">
                                                     <span class="videohover"></span>
                                                 </div><!-- end hover -->
