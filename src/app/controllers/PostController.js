@@ -39,6 +39,7 @@ class PostController {
                 description: course.description,
                 image: course.image,
                 link: course.link,
+                topic: formData.topic,
                 spotling: course.spotling,
                 category: course.category,
                 publicationDate: course.publicationDate

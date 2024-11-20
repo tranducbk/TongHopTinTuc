@@ -1184,6 +1184,8 @@ table.dataTable thead>tr>td.sorting {
 	transition: left 0.2s;
 }
 
+
+
 .rating-list {
 	display: flex;
 	justify-content: center
@@ -7482,6 +7484,10 @@ table.table-inbox tbody tr.checked {
 	color: #00B7E5;
 	font-size: 24px;
 	margin-right: 10px;
+}
+
+h2.widget-title {
+    text-align: center;
 }
 
 .post h1.post-title {

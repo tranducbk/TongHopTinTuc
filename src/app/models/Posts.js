@@ -10,7 +10,8 @@ const Posts = new Schema({
     link: { type: String, default: ''},
     spotling: { type: Boolean},
     category: {type: String},
-    publicationDate: { type: String }
+    publicationDate: { type: String },
+    topic: { type: String}
 }, {
     timestamps: true
 });
