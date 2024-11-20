@@ -16,34 +16,34 @@ class PostController {
     }
 
     // Test auto điền tên vào trường name của bài báo
-    /* 
-    // [POST] /post/create
-    create(req, res, next) {
-        const formData = req.body;
-        const courseApi = formData.link;
+    
+    // // [POST] /post/create
+    // create(req, res, next) {
+    //     const formData = req.body;
+    //     const courseApi = formData.link;
 
-        async function start() {
-            const courseData = await getCourses();
-            formData.name = courseData.title;
-            formData.spotling = true;
+    //     async function start() {
+    //         const courseData = await getCourses();
+    //         formData.name = courseData.title;
+    //         formData.spotling = true;
             
-            // Tạo đối tượng post và lưu vào cơ sở dữ liệu sau khi formData.name đã được gánx
-            const post = new Posts(formData);
-            post.save()
-                .then(() => res.redirect('/admin/assets'))
-                .catch(next);
-        }
+    //         // Tạo đối tượng post và lưu vào cơ sở dữ liệu sau khi formData.name đã được gán
+    //         const post = new Posts(formData);
+    //         post.save()
+    //             .then(() => res.redirect('/admin/assets'))
+    //             .catch(next);
+    //     }
 
-        start(); // Gọi hàm start()
+    //     start(); // Gọi hàm start()
 
-        // Lấy dữ liệu từ API
-        async function getCourses() {
-            const response = await fetch(courseApi);
-            const data = await response.json();
-            return data;
-        }
-    }
-    */
+    //     // Lấy dữ liệu từ API
+    //     async function getCourses() {
+    //         const response = await fetch(courseApi);
+    //         const data = await response.json();
+    //         return data;
+    //     }
+    // }
+    
     
     // [GET] /post-edit/:id/edit
     edit(req,res,next) {
